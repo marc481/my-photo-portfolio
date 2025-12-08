@@ -7,21 +7,26 @@ export interface Photo {
   src: string; // Path to the image file (public/images)
 }
 
-// Array of photos used in your gallery
-// Update the "src" values to match your actual filenames in public/images
 export const photos: Photo[] = [
   {
     id: 1,
-    title: "Castle Combe 1",
+    title: "Sitting Room",
     category: "Street",
     location: "Castle Combe",
-    src: "images/sitting-room-sunlight.jpg",
+    src: "images/sitting-room-sunlight.JPG",
   },
   {
     id: 2,
-    title: "Castle Combe 2",
+    title: "Manor House Hotel",
     category: "Landscape",
     location: "Castle Combe",
-    src: "/images/manor-house-hotel.jpg",
+    src: "/images/manor-house-hotel.JPG",
+  },
+  {
+    id: 3,
+    title: "Garden House",
+    category: "Landscape",
+    location: "London",
+    src: "/images/garden-house.jpg",
   },
 ];

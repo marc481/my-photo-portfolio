@@ -1,16 +1,18 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+// src/App.tsx
 
-function App() {
-  const [count, setCount] = useState(0);
+import Navbar from "./components/layout/Navbar";
+import AppNavigator from "./components/navigators/AppNavigator";
 
+export default function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <h1 className="text-4xl font-bold text-white-400">Tailwind 3 test</h1>
+    <div className="min-h-screen flex flex-col bg-white-950 text-neutral-100">
+      {/* Navbar at the top */}
+      <Navbar />
+
+      {/* Routed content in the middle */}
+      <main className="flex-1 max-w-5xl mx-auto w-full px-4 pt-24 pb-16">
+        <AppNavigator />
+      </main>
     </div>
   );
 }
-
-export default App;
