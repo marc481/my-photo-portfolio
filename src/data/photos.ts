@@ -29,4 +29,74 @@ export const photos: Photo[] = [
     location: "London",
     src: "/images/garden-house.jpg",
   },
+  {
+    id: 4,
+    title: "Shibuya Crossing",
+    category: "Landscape",
+    location: "Tokyo",
+    src: "/images/Shibuya-Crossing.jpg",
+  },
+  {
+    id: 5,
+    title: "Mt Fuji Village",
+    category: "Landscape",
+    location: "Japan",
+    src: "/images/mt-fuj-village.jpg",
+  },
+
+  {
+    id: 6,
+    title: "Cat in the Cafe",
+    category: "Landscape",
+    location: "Japan",
+    src: "/images/cafe-cat.jpg",
+  },
+
+  {
+    id: 7,
+    title: "Cat in the Cafe",
+    category: "Landscape",
+    location: "Japan",
+    src: "/images/street-sky.jpg",
+  },
+
+  {
+    id: 8,
+    title: "Clock in the Park",
+    category: "Landscape",
+    location: "Japan",
+    src: "/images/clock.jpg",
+  },
+
+  {
+    id: 9,
+    title: "Indian Chrollo",
+    category: "Landscape",
+    location: "Japan",
+    src: "/images/chrollo.jpg",
+  },
+
+  {
+    id: 10,
+    title: "Old man at the beach",
+    category: "Landscape",
+    location: "Seven Sisters",
+    src: "/images/the-end.JPG",
+  },
+
+  {
+    id: 11,
+    title: "Bikes",
+    category: "Landscape",
+    location: "Japan",
+    src: "/images/bikes.jpg",
+  },
+
+  {
+    id: 12,
+    title: "Free Man",
+    category: "Landscape",
+    location: "Seven Sisters",
+    src: "/images/free-man.JPG",
+  },
 ];
