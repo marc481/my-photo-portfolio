@@ -19,10 +19,10 @@ export default function GalleryScreen() {
         {photos.map((photo) => (
           <article
             key={photo.id}
-            className="mb-8 break-inside-void overflow-hidden rounded-2xl border border-neutral-200 bg-white"
+            className="mb-8 break-inside-void overflow-hidden border border-neutral-200 bg-white"
           >
             {/* Image area with fixed aspect ratio so cards stay consistent */}
-            <div className="w-full bg-neutral-900 rounded-lg overflow-hidden">
+            <div className="w-full bg-neutral-900 overflow-hidden">
               <img
                 src={photo.src}
                 alt={photo.title}
