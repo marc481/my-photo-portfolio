@@ -8,14 +8,17 @@ export default function NavBar() {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            `inline-block text-sm font-semibold tracking-wide transition ${
-              isActive
-                ? "text-neutral-900"
-                : "text-neutral-700 hover:text-neutral-900"
-            }`
+            `
+    relative inline-block text-2xl font-medium tracking-tight transition
+    ${
+      isActive
+        ? "text-neutral-900 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-neutral-900"
+        : "text-neutral-700 hover:text-neutral-900"
+    }
+    `
           }
         >
-          Ben
+          ben
         </NavLink>
       </div>
 
