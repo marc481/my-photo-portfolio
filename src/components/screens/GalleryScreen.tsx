@@ -1,7 +1,14 @@
 import PageLayout from "../layout/PageLayout";
-import { photos } from "../../data/photos"; // Make sure this path is correct
+import { photos } from "../../data/photos";
+import { useState } from "react";
+import FullscreenImage from "../UI/FullScreenImage";
 
 export default function GalleryScreen() {
+  const [activePhoto, setActivePhoto] = useState<{
+    src: string;
+    alt: string;
+  } | null>(null);
+
   return (
     <PageLayout>
       <section className="space-y-4">
@@ -13,26 +20,35 @@ export default function GalleryScreen() {
           </p>
         </header>
 
-        {/* Responsive columns: 1 col on mobile, 2 on small screens, 2 on medium+ */}
         <div className="columns-1 sm:columns-2 lg:columns-2 gap-8">
-          {/* Loop through each photo object and render a card */}
           {photos.map((photo) => (
             <article
               key={photo.id}
-              className="mb-8 break-inside-void overflow-hidden border border-neutral-200 bg-white"
+              className="mb-8 break-inside-avoid overflow-hidden border border-neutral-200 bg-white"
             >
-              {/* Image area with fixed aspect ratio so cards stay consistent */}
               <div className="w-full bg-neutral-900 overflow-hidden">
                 <img
                   src={photo.src}
                   alt={photo.title}
-                  className="w-full h-auto"
+                  className="w-full h-auto cursor-pointer"
+                  onClick={() =>
+                    setActivePhoto({
+                      src: photo.src,
+                      alt: photo.title,
+                    })
+                  }
                 />
               </div>
             </article>
           ))}
         </div>
       </section>
+      <FullscreenImage
+        isOpen={activePhoto !== null}
+        src={activePhoto?.src ?? ""}
+        alt={activePhoto?.alt ?? ""}
+        onClose={() => setActivePhoto(null)}
+      />
     </PageLayout>
   );
 }

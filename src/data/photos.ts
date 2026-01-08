@@ -123,4 +123,35 @@ export const photos: Photo[] = [
     location: "Castle Combe",
     src: "/images/sun-sitting-room.jpg",
   },
+  {
+    id: 16,
+    title: "Piggy and Porky",
+    category: "Still Life",
+    location: "London",
+    src: "/images/piggy-porky.JPG",
+  },
+
+  {
+    id: 17,
+    title: "Mum and Son",
+    category: "Landscape",
+    location: "Cotswold",
+    src: "/images/mum&son.JPG",
+  },
+
+  {
+    id: 18,
+    title: "Boats",
+    category: "Landscape",
+    location: "London",
+    src: "/images/boats.JPG",
+  },
+
+  {
+    id: 19,
+    title: "Christmas Tree",
+    category: "Still Life",
+    location: "Cotswold",
+    src: "/images/christmasTree.JPG",
+  },
 ];
