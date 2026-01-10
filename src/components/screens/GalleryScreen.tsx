@@ -1,37 +1,54 @@
-// src/components/screens/GalleryScreen.tsx
+import PageLayout from "../layout/PageLayout";
+import { photos } from "../../data/photos";
+import { useState } from "react";
+import FullscreenImage from "../UI/FullScreenImage";
 
-import { photos } from "../../data/photos"; // Make sure this path is correct
-
-// This screen shows a grid of photo cards using the photos array
 export default function GalleryScreen() {
-  return (
-    <section className="space-y-4">
-      <header className="space-y-2">
-        <h2 className="text-2xl font-semibold">Portfolio</h2>
-        <p className="text-sm text-neutral-600">
-          A selection of my favourite images from travel, street, and landscape.
-        </p>
-      </header>
+  const [activePhoto, setActivePhoto] = useState<{
+    src: string;
+    alt: string;
+  } | null>(null);
 
-      {/* Responsive columns: 1 col on mobile, 2 on small screens, 2 on medium+ */}
-      <div className="columns-1 sm:columns-2 lg:columns-2 gap-8">
-        {/* Loop through each photo object and render a card */}
-        {photos.map((photo) => (
-          <article
-            key={photo.id}
-            className="mb-8 break-inside-void overflow-hidden rounded-2xl border border-neutral-200 bg-white"
-          >
-            {/* Image area with fixed aspect ratio so cards stay consistent */}
-            <div className="w-full bg-neutral-900 rounded-lg overflow-hidden">
-              <img
-                src={photo.src}
-                alt={photo.title}
-                className="w-full h-auto"
-              />
-            </div>
-          </article>
-        ))}
-      </div>
-    </section>
+  return (
+    <PageLayout>
+      <section className="space-y-4">
+        <header className="space-y-2">
+          <h2 className="text-2xl font-semibold">Portfolio</h2>
+          <p className="text-sm text-neutral-600">
+            A selection of my favourite images from travel, street, and
+            landscape.
+          </p>
+        </header>
+
+        <div className="columns-1 sm:columns-2 lg:columns-2 gap-8">
+          {photos.map((photo) => (
+            <article
+              key={photo.id}
+              className="mb-8 break-inside-avoid overflow-hidden border border-neutral-200 bg-white"
+            >
+              <div className="w-full bg-neutral-900 overflow-hidden">
+                <img
+                  src={photo.src}
+                  alt={photo.title}
+                  className="w-full h-auto cursor-pointer"
+                  onClick={() =>
+                    setActivePhoto({
+                      src: photo.src,
+                      alt: photo.title,
+                    })
+                  }
+                />
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+      <FullscreenImage
+        isOpen={activePhoto !== null}
+        src={activePhoto?.src ?? ""}
+        alt={activePhoto?.alt ?? ""}
+        onClose={() => setActivePhoto(null)}
+      />
+    </PageLayout>
   );
 }

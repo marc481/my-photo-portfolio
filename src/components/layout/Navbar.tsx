@@ -1,61 +1,54 @@
 import { NavLink } from "react-router-dom";
 
-export default function Navbar() {
+export default function NavBar() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-20 border-b border-neutral-800 bg-white/90 backdrop-blur">
-      <nav className="mx-auto flex max-w-5xl items-center justify-center px-6 py-4">
-        {/*Centered Navigation */}
-        <div className="flex gap-8 text-xs uppercase tracking-widest text-neutral-800">
-          {/* Helper to keep classes consistent */}
+    <aside className="fixed left-0 top-0 h-screen w-56 border-r border-neutral-200 bg-white px-6 py-8">
+      {/* Name / branding */}
+      <div>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            `
+    relative inline-block text-2xl font-medium tracking-tight transition
+    ${
+      isActive
+        ? "text-neutral-900 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-neutral-900"
+        : "text-neutral-700 hover:text-neutral-900"
+    }
+    `
+          }
+        >
+          ben
+        </NavLink>
+      </div>
 
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              `transition hover:text-neutral-900 ${
-                isActive ? "text-neutral-900 font-semibold" : ""
-              }`
-            }
-          >
-            Home
-          </NavLink>
+      {/* Spacer between name and nav */}
+      <div className="mt-10" />
 
-          {/* Gallery / Portfolio Screen */}
-          <NavLink
-            to="/gallery"
-            className={({ isActive }) =>
-              `transition hover:text-neutral-900 ${
-                isActive ? "text-neutral-900 font-semibold" : ""
-              }`
-            }
-          >
-            Portfolio
-          </NavLink>
+      {/* Navigation */}
+      <nav className="flex flex-col gap-6 text-xs uppercase tracking-widest">
+        <NavLink
+          to="/gallery"
+          className={({ isActive }) =>
+            isActive
+              ? "font-semibold text-neutral-900"
+              : "text-neutral-500 hover:text-neutral-900 transition"
+          }
+        >
+          Gallery
+        </NavLink>
 
-          {/* About Screen */}
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              `transition hover:text-neutral-900 ${
-                isActive ? "text-neutral-900 font-semibold" : ""
-              }`
-            }
-          >
-            About
-          </NavLink>
-
-          {/* Contact Screen */}
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              `transition hover:text-neutral-900 ${
-                isActive ? "text-neutral-900 font-semibold" : ""
-              }`
-            }
-          >
-            Contact
-          </NavLink>
-        </div>
+        <NavLink
+          to="/about"
+          className={({ isActive }) =>
+            isActive
+              ? "font-semibold text-neutral-900"
+              : "text-neutral-500 hover:text-neutral-900 transition"
+          }
+        >
+          About
+        </NavLink>
       </nav>
-    </header>
+    </aside>
   );
 }
