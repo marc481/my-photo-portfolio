@@ -1,11 +1,12 @@
-// Interface describing a single photo item
 export interface Photo {
   id: number;
   title: string;
   category: string;
   location: string;
-  src: string; // Path to the image file (public/images)
+  src: string;
 }
+
+const base = import.meta.env.BASE_URL + "images/";
 
 export const photos: Photo[] = [
   {
@@ -13,145 +14,132 @@ export const photos: Photo[] = [
     title: "Sitting Room",
     category: "Street",
     location: "Castle Combe",
-    src: "images/sitting-room-sunlight.JPG",
+    src: `${base}sitting-room-sunlight.JPG`,
   },
   {
     id: 2,
     title: "Manor House Hotel",
     category: "Landscape",
     location: "Castle Combe",
-    src: "/images/manor-house-hotel.JPG",
+    src: `${base}manor-house-hotel.JPG`,
   },
   {
     id: 3,
     title: "Shibuya Crossing",
     category: "Landscape",
     location: "Tokyo",
-    src: "/images/Shibuya-Crossing.jpg",
+    src: `${base}Shibuya-Crossing.jpg`,
   },
   {
     id: 4,
     title: "Mt Fuji Village",
     category: "Landscape",
     location: "Japan",
-    src: "/images/mt-fuj-village.jpg",
+    src: `${base}mt-fuji-village.jpg`,
   },
-
   {
     id: 5,
     title: "Cat in the Cafe",
-    category: "Landscape",
+    category: "Street",
     location: "Japan",
-    src: "/images/cafe-cat.jpg",
+    src: `${base}cafe-cat.jpg`,
   },
-
   {
     id: 6,
-    title: "Cat in the Cafe",
-    category: "Landscape",
+    title: "Street Sky",
+    category: "Street",
     location: "Japan",
-    src: "/images/street-sky.jpg",
+    src: `${base}street-sky.jpg`,
   },
-
   {
     id: 7,
     title: "Clock in the Park",
-    category: "Landscape",
+    category: "Street",
     location: "Japan",
-    src: "/images/clock.jpg",
+    src: `${base}clock.jpg`,
   },
-
   {
     id: 8,
     title: "Indian Chrollo",
-    category: "Landscape",
+    category: "Portrait",
     location: "Japan",
-    src: "/images/chrollo.jpg",
+    src: `${base}chrollo.jpg`,
   },
-
   {
     id: 9,
-    title: "Old man at the beach",
-    category: "Landscape",
+    title: "Old Man at the Beach",
+    category: "Street",
     location: "Seven Sisters",
-    src: "/images/the-end.JPG",
+    src: `${base}the-end.JPG`,
   },
-
   {
     id: 10,
     title: "Bikes",
-    category: "Landscape",
+    category: "Street",
     location: "Japan",
-    src: "/images/bikes.jpg",
+    src: `${base}bikes.jpg`,
   },
-
   {
     id: 11,
     title: "Free Man",
-    category: "Landscape",
+    category: "Street",
     location: "Seven Sisters",
-    src: "/images/free-man.JPG",
+    src: `${base}free-man.JPG`,
   },
-
   {
     id: 12,
-    title: "Cat Seven Sisters",
-    category: "Landscape",
+    title: "Cat at Seven Sisters",
+    category: "Street",
     location: "Seven Sisters",
-    src: "/images/cat-seven-sisters.JPG",
+    src: `${base}cat-seven-sisters.JPG`,
   },
-
   {
     id: 13,
     title: "Mt Fuji Sidequest",
     category: "Landscape",
     location: "Japan",
-    src: "/images/fuji-sidequest.jpg",
+    src: `${base}fuji-sidequest.jpg`,
   },
-
   {
     id: 14,
-    title: "Sheep in the field",
+    title: "Sheep in the Field",
     category: "Landscape",
     location: "Seven Sisters",
-    src: "/images/sheep-in-field.JPG",
+    src: `${base}sheep-in-field.JPG`,
   },
   {
     id: 15,
-    title: "Sitting Room in the Sunlight",
-    category: "Landscape",
+    title: "Sunlit Sitting Room",
+    category: "Interior",
     location: "Castle Combe",
-    src: "/images/sun-sitting-room.jpg",
+    src: `${base}sun-sitting-room.jpg`,
   },
   {
     id: 16,
     title: "Piggy and Porky",
     category: "Still Life",
     location: "London",
-    src: "/images/piggy-porky.JPG",
+    src: `${base}piggy-porky.JPG`,
   },
-
   {
     id: 17,
     title: "Mum and Son",
-    category: "Landscape",
-    location: "Cotswold",
-    src: "/images/mum&son.JPG",
+    category: "Street",
+    location: "Cotswolds",
+    src: `${base}mum-and-son.JPG`,
   },
-
   {
     id: 18,
     title: "Boats",
     category: "Landscape",
     location: "London",
-    src: "/images/boats.JPG",
+    src: `${base}boats.JPG`,
   },
-
   {
     id: 19,
     title: "Christmas Tree",
     category: "Still Life",
-    location: "Cotswold",
-    src: "/images/christmasTree.JPG",
+    location: "Cotswolds",
+    src: `${base}christmasTree.JPG`,
   },
 ];

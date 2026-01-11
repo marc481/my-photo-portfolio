@@ -15,11 +15,11 @@ export default function AboutScreen() {
           {/* Text */}
           <div className="space-y-4 md:w-1/2">
             <h1 className="text-3xl md:text-4xl font-semibold leading-tight">
-              John
+              Marcus Ocampo
             </h1>
 
             <p className="text-sm text-neutral-600 leading-relaxed">
-              I’m John, a hobbyist photographer based in London, UK. My work
+              I’m Marcus, a hobbyist photographer based in London, UK. My work
               focuses on quiet moments, subtle colour, and the small details of
               everyday life. This portfolio brings together my passion for
               photography and my background in programming, combining visual
