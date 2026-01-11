@@ -18,7 +18,7 @@ export default function NavBar() {
     `
           }
         >
-          ben
+          Marcus Ocampo
         </NavLink>
       </div>
 
