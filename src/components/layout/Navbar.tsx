@@ -18,7 +18,7 @@ export default function NavBar() {
     `
           }
         >
-          Marcus Ocampo
+          hello
         </NavLink>
       </div>
 
