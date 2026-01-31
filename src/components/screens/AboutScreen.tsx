@@ -39,7 +39,7 @@ export default function AboutScreen() {
               </a>
 
               {/* Socials grid */}
-              <div className="mt-4 grid grid-cols-2 gap-x-6 gap-y-3 max-w-sm">
+              <div className="mt-4 grid grid-cols-1 gap-x-6 gap-y-3 max-w-sm">
                 <a
                   href="https://www.linkedin.com/in/marcus-ocampo-3435b0264/"
                   target="_blank"
