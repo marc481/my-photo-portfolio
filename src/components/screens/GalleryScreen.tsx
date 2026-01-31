@@ -20,7 +20,7 @@ export default function GalleryScreen() {
           </p>
         </header>
 
-        <div className="columns-1 sm:columns-2 lg:columns-2 gap-8">
+        <div className="columns-1 sm:columns-2 lg:columns-2 gap-6 sm:gap-8">
           {photos.map((photo) => (
             <article
               key={photo.id}
@@ -30,7 +30,7 @@ export default function GalleryScreen() {
                 <img
                   src={photo.src}
                   alt={photo.title}
-                  className="w-full h-auto cursor-pointer"
+                  className="w-full h-auto cursor-pointer block"
                   onClick={() =>
                     setActivePhoto({
                       src: photo.src,

@@ -4,7 +4,7 @@ export default function HomeScreen() {
   return (
     <PageLayout>
       <section className="max-w-5xl mx-auto px-6 py-20">
-        <div className="flex flex-col md:flex-row gap-12 items-start">
+        <div className="flex flex-col md:flex-row md:gap-12 items-center md:items-start">
           <div className="w-full md:w-3/5">
             <img
               src="/images/sitting-room-sunlight.JPG"
@@ -13,13 +13,13 @@ export default function HomeScreen() {
             />
           </div>
 
-          <div className="space-y-4 md:w-1/2">
+          <div className="space-y-4 md:w-2/5">
             <p className="text-[0.7rem] uppercase tracking-[0.3em] text-neutral-500">
               Landscape and quite moments
             </p>
 
             <h1 className="text-3xl md:text-4xl font-semibold leading-tight text-neutral-900">
-              Photographer exporing quiet and everyday moments.
+              Photographer exploring quiet and everyday moments.
             </h1>
 
             <p className="text-sm md:text-base text-neutral-700 leading-relaxed max-w-xl">
